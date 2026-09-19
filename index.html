@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Player Two</title>
+<meta name="description" content="A webcam is all it takes to teach a robot.">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2307080b'/%3E%3Crect x='6' y='9' width='8' height='14' rx='2' fill='none' stroke='%2367e8f9' stroke-width='2'/%3E%3Crect x='18' y='9' width='8' height='14' rx='2' fill='%23fb923c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<!-- Player Two: eleven slides on a 1920x1080 stage that scales to the viewport.
+     Arrows / space / click to advance. Each slide is deep-linkable as #1 .. #11. -->
+<div class="deck" id="deck">
+<div class="stage" id="stage">
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <!-- 01 · title -->
+  <section class="slide s1" data-kick="Player Two" data-chrome="min" data-dwell="9"
+    data-line="A webcam is all it takes to teach a robot.">
+    <canvas class="amb full" data-scene="title" aria-hidden="true"></canvas>
+    <div class="s1-copy">
+      <div class="players in" style="--d:0ms">
+        <span class="pl p1"><i></i>PLAYER ONE <em>you</em></span>
+        <span class="pl p2"><i></i>PLAYER TWO <em>the robot</em></span>
+      </div>
+      <h1 class="wordmark" aria-label="Player Two">
+        <span class="wm-line" data-split="chars" style="--d:150ms">PLAYER</span>
+        <span class="wm-line two" data-split="chars" style="--d:520ms">TWO</span>
+      </h1>
+      <p class="lead in" style="--d:1100ms">A webcam is all it takes<br>to teach a robot.</p>
+      <div class="start in" style="--d:1700ms"><kbd>SPACE</kbd><span>press to start</span></div>
+    </div>
+  </section>
+
+  <!-- 02 · the bottleneck -->
+  <section class="slide s2" data-kick="The bottleneck" data-dwell="14"
+    data-line="Robot foundation models are starved for demonstrations, not architecture.">
+    <div class="body col">
+      <h2 class="h-xl" data-split style="--d:0ms">Robot foundation models are starved for <em>demonstrations</em>, <span class="fade">not architecture.</span></h2>
+      <div class="s2-stats">
+        <article class="stat in" style="--d:700ms">
+          <div class="lbl"><i class="dot cyan"></i>DROID</div>
+          <div class="stat-row">
+            <div class="fig"><b class="n" data-count="350" data-prefix="~">~350</b><span>hours</span></div>
+            <div class="fig sm"><b class="n" data-count="564">564</b><span>scenes</span></div>
+            <div class="fig sm"><b class="n" data-count="52">52</b><span>buildings</span></div>
+          </div>
+        </article>
+        <article class="stat wide in" style="--d:900ms">
+          <div class="lbl"><i class="dot ink"></i>ISAAC <span class="n">0.5</span></div>
+          <div class="stat-row">
+            <div class="fig"><b class="n" data-count="100000" data-comma="1">100,000</b><span>hours of robot experience</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="s2-field in" style="--d:1100ms">
+        <div class="legend">
+          <span><i class="dot cyan"></i>DROID, <b class="n">3.5</b> dots</span>
+          <span><i class="dot ink"></i>Isaac <b class="n">0.5</b>, <b class="n">1,000</b> dots</span>
+          <span class="right"><b class="n">1</b> dot = <b class="n">100</b> hours</span>
+        </div>
+        <canvas class="amb" data-scene="dots" aria-hidden="true"></canvas>
+      </div>
+      <p class="foot in" style="--d:1400ms">Figures read from the public model and dataset cards, <span class="n">2026-09-18</span>.</p>
+    </div>
+  </section>
+
+  <!-- 03 · why -->
+  <section class="slide s3" data-kick="Why" data-dwell="13"
+    data-line="Every one of those hours needed an operator, standing next to the robot. This does not scale.">
+    <div class="body two-col">
+      <div class="col s3-copy">
+        <h2 class="h-xl" data-split style="--d:0ms">Every one of those<br>hours needed<br><em>an operator.</em></h2>
+        <p class="lead in" style="--d:700ms">With a leader arm or a VR rig, standing next to the robot.</p>
+      </div>
+      <div class="s3-dia">
+        <div class="unit">
+          <div class="ucard in" style="--d:500ms">
+            <svg viewBox="0 0 72 72" class="ico"><rect x="10" y="26" width="52" height="26" rx="9"/><path d="M12 32C8 12 64 12 60 32"/><path d="M29 52l7-8 7 8"/></svg>
+            <b><span class="n">1</span> rig</b><span>leader arm or VR</span>
+          </div>
+          <i class="plus in" style="--d:650ms">+</i>
+          <div class="ucard in" style="--d:750ms">
+            <svg viewBox="0 0 72 72" class="ico"><circle cx="36" cy="22" r="10"/><path d="M14 60c0-14 10-22 22-22s22 8 22 22"/></svg>
+            <b><span class="n">1</span> operator</b><span>in the room</span>
+          </div>
+          <i class="plus in" style="--d:900ms">+</i>
+          <div class="ucard in" style="--d:1000ms">
+            <svg viewBox="0 0 72 72" class="ico"><path d="M12 60h32M28 60V46l18-17 11 9"/><circle cx="28" cy="46" r="4"/><circle cx="46" cy="29" r="4"/><path d="M57 38l7-3M57 38l3 7"/></svg>
+            <b><span class="n">1</span> robot</b><span>real hardware</span>
+          </div>
+        </div>
+        <div class="mult in" style="--d:1300ms">
+          <b class="n" id="mult">x1</b>
+          <span>rigs, operators and robots, for every hour of data</span>
+        </div>
+        <div class="gridwrap in" style="--d:1500ms">
+          <canvas class="amb" data-scene="grid" aria-hidden="true"></canvas>
+          <div class="verdict"><span>This does not scale.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · the idea -->
+  <section class="slide s4" data-kick="The idea" data-dwell="16"
+    data-line="You are Player One. The robot is Player Two.">
+    <div class="body two-col">
+      <div class="col s4-copy">
+        <h2 class="h-lg">
+          <span class="ln" data-split style="--d:0ms">You are <em class="c1">Player One.</em></span>
+          <span class="ln" data-split style="--d:450ms">The robot is <em class="c2">Player Two.</em></span>
+        </h2>
+        <ol class="steps">
+          <li class="in" style="--d:1000ms"><b class="n">01</b>Open a URL.</li>
+          <li class="in" style="--d:1150ms"><b class="n">02</b>Move your arms.</li>
+          <li class="in" style="--d:1300ms"><b class="n">03</b>A humanoid in a physics simulator mirrors you.</li>
+          <li class="in" style="--d:1450ms"><b class="n">04</b>What passes the gates becomes training data.</li>
+        </ol>
+      </div>
+      <figure class="screen in" style="--d:600ms" data-media>
+        <canvas class="amb ph" data-scene="demo" aria-hidden="true"></canvas>
+        <video data-src="media/demo.mp4" muted loop playsinline preload="metadata" aria-label="The simulated humanoid mirrors human motion and strikes pendulums"></video>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption class="ph-chip"><b>PLACEHOLDER</b> media/demo.mp4</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 05 · how it works -->
+  <section class="slide s5" data-kick="How it works" data-dwell="18"
+    data-line="Capture, retarget, simulate, judge, dataset.">
+    <div class="body col">
+      <h2 class="h-xl" data-split style="--d:0ms">From webcam to dataset, <em>five stages.</em></h2>
+      <div class="pipe" id="pipe">
+        <div class="brace b1 in" style="--d:500ms"><span>IN THE BROWSER</span></div>
+        <div class="brace b2 in" style="--d:650ms"><span>ON THE SERVER</span></div>
+
+        <article class="node in" style="--d:700ms">
+          <div class="node-top"><b class="n">01</b>
+            <svg viewBox="0 0 56 56" class="ico"><rect x="6" y="11" width="44" height="30" rx="7"/><circle cx="28" cy="26" r="8"/><path d="M19 49h18"/></svg></div>
+          <h3>Capture</h3>
+          <p>Pose in the browser. Only joint angles leave the device.</p>
+        </article>
+        <i class="conn in" style="--d:850ms"></i>
+        <article class="node in" style="--d:900ms">
+          <div class="node-top"><b class="n">02</b>
+            <svg viewBox="0 0 56 56" class="ico"><path d="M9 42l13-22 13 12"/><circle cx="9" cy="42" r="3.5"/><circle cx="22" cy="20" r="3.5"/><circle cx="35" cy="32" r="3.5"/><path d="M38 17h11m-5-5l5 5-5 5"/></svg></div>
+          <h3>Retarget</h3>
+          <p>To the robot's joints, within <span class="n">3</span> degrees, measured.</p>
+        </article>
+        <i class="conn in" style="--d:1050ms"></i>
+        <article class="node in" style="--d:1100ms">
+          <div class="node-top"><b class="n">03</b>
+            <svg viewBox="0 0 56 56" class="ico"><path d="M8 8h40M28 8l11 29"/><circle cx="41" cy="42" r="6"/><path d="M10 48h14"/></svg></div>
+          <h3>Simulate</h3>
+          <p>MuJoCo physics, <span class="n">250</span> Hz, in the browser via WebAssembly.</p>
+        </article>
+        <i class="conn cross in" style="--d:1250ms"></i>
+        <article class="node in" style="--d:1300ms">
+          <div class="node-top"><b class="n">04</b>
+            <svg viewBox="0 0 56 56" class="ico"><path d="M28 6l18 6v14c0 12-8 20-18 24C18 46 10 38 10 26V12z"/><path d="M20 27l6 6 11-12"/></svg></div>
+          <h3>Judge</h3>
+          <p>The server replays every upload.</p>
+        </article>
+        <i class="conn in" style="--d:1450ms"></i>
+        <article class="node in" style="--d:1500ms">
+          <div class="node-top"><b class="n">05</b>
+            <svg viewBox="0 0 56 56" class="ico"><ellipse cx="28" cy="13" rx="18" ry="6"/><path d="M10 13v29c0 3.3 8 6 18 6s18-2.7 18-6V13"/><path d="M10 27.5c0 3.3 8 6 18 6s18-2.7 18-6"/></svg></div>
+          <h3>Dataset</h3>
+          <p>LeRobot format.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · fail closed -->
+  <section class="slide s6" data-kick="Fail closed" data-dwell="16"
+    data-line="Low confidence never becomes motion. An unverified success never becomes data.">
+    <div class="body two-col">
+      <div class="col s6-copy">
+        <div class="lbl in" style="--d:0ms"><span class="n">11</span> GATES, EVERY EPISODE</div>
+        <h2 class="h-xxl" data-split style="--d:100ms">Fail closed.</h2>
+        <p class="lead in" style="--d:800ms">Low confidence never becomes motion.<br>An unverified success never becomes data.</p>
+      </div>
+      <div class="gates in" id="gates" style="--d:400ms">
+        <div class="gate"><b class="n">01</b><span>success on server replay</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">02</b><span>client and replay agree</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">03</b><span>correct hand made first contact</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">04</b><span>tracking confidence holds</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">05</b><span>joint-range clamps</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">06</b><span>speed cap</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">07</b><span>torque saturation</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">08</b><span>self-collision</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">09</b><span>command jerk</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">10</b><span>dropped frames</span><i class="tick"></i></div>
+        <div class="gate"><b class="n">11</b><span>minimum length</span><i class="tick"></i></div>
+        <div class="gate sum"><b class="n" id="gateCount">00 / 11</b><span>all gates pass: <em>accepted</em></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 · never trust the client -->
+  <section class="slide s7" data-kick="Never trust the client" data-dwell="15"
+    data-line="The server re-simulates every episode with the same deterministic physics.">
+    <div class="body col">
+      <h2 class="h-xl" data-split style="--d:0ms">Never trust <em class="rose">the client.</em></h2>
+      <div class="cases">
+        <article class="case in" style="--d:500ms">
+          <header><span class="lbl">UPLOAD</span><b>shaky-hands</b><i class="pill">tamper case</i></header>
+          <div class="case-body">
+            <canvas class="amb" data-scene="jerk" aria-hidden="true"></canvas>
+            <div class="readout">
+              <span class="lbl">COMMAND JERK</span>
+              <b class="n big rose">0.40<small>rad</small></b>
+              <span class="n sub">limit 0.02</span>
+              <div class="gauge"><i></i><em></em></div>
+            </div>
+          </div>
+          <footer class="verdict-row"><div class="stamp">REJECTED</div><span class="why">command jerk <b class="n">0.40</b> rad (limit <b class="n">0.02</b>)</span></footer>
+        </article>
+        <article class="case in" style="--d:700ms">
+          <header><span class="lbl">UPLOAD</span><b>claims-success</b><i class="pill">tamper case</i></header>
+          <div class="case-body">
+            <canvas class="amb" data-scene="miss" aria-hidden="true"></canvas>
+            <div class="readout">
+              <span class="lbl">CLIENT CLAIMS</span>
+              <b class="claim">success: true</b>
+              <span class="lbl">SERVER REPLAY</span>
+              <b class="truth">success: false</b>
+            </div>
+          </div>
+          <footer class="verdict-row"><div class="stamp">REJECTED</div><span class="why">server replay shows the bob was never struck</span></footer>
+        </article>
+      </div>
+      <p class="lead center in" style="--d:1100ms">The server re-simulates every episode with the same deterministic physics.</p>
+    </div>
+  </section>
+
+  <!-- 08 · from any video -->
+  <section class="slide s8" data-kick="From any video" data-dwell="16"
+    data-line="Skeleton in, robot out. Not one pixel of the person is stored.">
+    <div class="body two-col">
+      <figure class="screen in" style="--d:300ms" data-media>
+        <canvas class="amb ph" data-scene="split" aria-hidden="true"></canvas>
+        <video data-src="media/skeleton-vs-robot.mp4" muted loop playsinline preload="metadata" aria-label="Left: pose skeleton extracted from an online video. Right: the robot doing the same motion"></video>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <figcaption class="ph-chip"><b>PLACEHOLDER</b> media/skeleton-vs-robot.mp4</figcaption>
+      </figure>
+      <div class="col s8-copy">
+        <h2 class="h-lg" data-split style="--d:0ms">From <em>any video.</em></h2>
+        <p class="lead in" style="--d:700ms">Demonstrations from videos found online.</p>
+        <p class="lead strong in" style="--d:900ms">Skeleton in, robot out.</p>
+        <div class="privacy in" style="--d:1150ms"><b class="n">0</b><span>Not one pixel of the person is stored.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · the room is the rig -->
+  <section class="slide s9" data-kick="The room is the rig" data-dwell="18"
+    data-line="Put the QR code on the projector. Every laptop becomes a teleoperation rig.">
+    <div class="body two-col">
+      <figure class="browser in" style="--d:300ms" data-media>
+        <div class="bar"><i></i><i></i><i></i><span>DATASET WALL <em>live</em></span></div>
+        <div class="view">
+          <canvas class="amb ph" data-scene="wall" aria-hidden="true"></canvas>
+          <img data-src="media/wall.png" alt="Screenshot of the live dataset wall">
+          <figcaption class="ph-chip"><b>PLACEHOLDER</b> media/wall.png</figcaption>
+        </div>
+      </figure>
+      <div class="col s9-copy">
+        <h2 class="h-lg" data-split style="--d:0ms">The room <em>is the rig.</em></h2>
+        <div class="tally in" style="--d:600ms">
+          <b class="n" id="tally">000</b>
+          <span>episodes accepted<small>illustrative animation</small></span>
+        </div>
+        <div class="cover in" id="cover" style="--d:800ms">
+          <span></span><span class="ch">LEFT HAND</span><span class="ch">RIGHT HAND</span>
+          <span class="rh">HIGH</span><i data-cell="0"><b class="n">0</b></i><i data-cell="1"><b class="n">0</b></i>
+          <span class="rh">MID</span><i data-cell="2"><b class="n">0</b></i><i data-cell="3"><b class="n">0</b></i>
+          <span class="rh">LOW</span><i data-cell="4"><b class="n">0</b></i><i data-cell="5"><b class="n">0</b></i>
+        </div>
+        <div class="agent in" style="--d:950ms"><span class="lbl">DATASET AGENT</span><b id="ask">asking for: left hand, high pendulum</b></div>
+      </div>
+    </div>
+    <p class="s9-line in" style="--d:1200ms">Put the QR code on the projector. Every laptop becomes a teleoperation rig. <em>The dataset agent asks for what is missing.</em></p>
+  </section>
+
+  <!-- 10 · what is real today -->
+  <section class="slide s10" data-kick="What is real today" data-dwell="18"
+    data-line="No policy is trained here. The dataset is the product.">
+    <div class="body col">
+      <h2 class="h-xl" data-split style="--d:0ms">What is <em>real</em> today.</h2>
+      <div class="real">
+        <article class="cell in" style="--d:500ms"><b class="n" data-count="19">19</b><span>tests against real MuJoCo</span></article>
+        <article class="cell in" style="--d:620ms"><b class="n"><small class="pre">&lt;</small>3<small>deg</small></b><span>retarget error &lt; <i class="n">3</i> degrees</span></article>
+        <article class="cell ok in" style="--d:740ms"><b class="n"><i data-count="6">6</i>/6</b><span>tasks accepted from the scripted pilot</span></article>
+        <article class="cell bad in" style="--d:860ms"><b class="n" data-count="5">5</b><span>tamper cases rejected</span></article>
+        <article class="cell in" style="--d:980ms"><b class="n">v3.0</b><span>dataset written and loaded back with LeRobot <i class="n">0.6.1</i> (format <i class="n">v3.0</i>)</span></article>
+        <article class="cell zero in" style="--d:1100ms"><b class="n" data-count="0" data-from="640">0</b><span>pixels of any operator stored</span></article>
+      </div>
+      <p class="honest in" style="--d:1500ms"><span class="lbl">HONEST NOTE</span>Replay is open-loop playback of recorded actions. No policy is trained here. The dataset is the product.</p>
+    </div>
+  </section>
+
+  <!-- 11 · close -->
+  <section class="slide s11" data-kick="Next week" data-chrome="min" data-dwell="20"
+    data-line="That took a webcam. The arm arrives next week.">
+    <canvas class="amb full" data-scene="arms" aria-hidden="true"></canvas>
+    <div class="s11-copy">
+      <p class="close-1">That took a webcam.</p>
+      <p class="close-2">The arm arrives <em>next week.</em></p>
+      <p class="close-3">The same pipeline drives a real <span class="n">SO-ARM101</span>.</p>
+      <div class="endcard">
+        <i class="rule"></i>
+        <div class="end-mark"><i class="glyph"><b></b><b></b></i><span>PLAYER</span><span class="two">TWO</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- chrome -->
+  <header class="chrome-top" id="chromeTop">
+    <div class="mark"><i class="glyph"><b></b><b></b></i><span>PLAYER TWO</span></div>
+    <div class="kick" id="kick"></div>
+    <div class="num n"><span id="numA">01</span><em>/</em><span id="numB">11</span></div>
+  </header>
+  <nav class="segs" id="segs" aria-label="Slides"></nav>
+  <i class="wipe" id="wipe" aria-hidden="true"></i>
+</div>
+
+<!-- portrait companion: readable caption and big controls when the stage is letterboxed on a phone -->
+<aside class="companion" id="companion">
+  <div class="c-num n" id="cNum">01 / 11</div>
+  <div class="c-kick" id="cKick"></div>
+  <p class="c-line" id="cLine"></p>
+  <div class="c-nav"><button type="button" id="cPrev" aria-label="Previous slide">PREV</button><button type="button" id="cNext" aria-label="Next slide">NEXT</button></div>
+  <p class="c-hint">Tap to advance. Rotate for the full stage.</p>
+</aside>
+
+<div class="hud" id="hud">
+  <button type="button" id="prev" aria-label="Previous slide">PREV</button>
+  <button type="button" id="next" aria-label="Next slide">NEXT</button>
+  <button type="button" id="auto" aria-pressed="false">AUTO</button>
+  <button type="button" id="full">FULL</button>
+</div>
+</div>
+<script src="deck.js"></script>
+</body>
+</html>
