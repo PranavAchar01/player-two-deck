@@ -152,7 +152,7 @@
           <div class="node-top"><b class="n">02</b>
             <svg viewBox="0 0 56 56" class="ico"><path d="M9 42l13-22 13 12"/><circle cx="9" cy="42" r="3.5"/><circle cx="22" cy="20" r="3.5"/><circle cx="35" cy="32" r="3.5"/><path d="M38 17h11m-5-5l5 5-5 5"/></svg></div>
           <h3>Retarget</h3>
-          <p>To the robot's joints, within <span class="n">3</span> degrees, measured.</p>
+          <p>To the real G1's joints, within <span class="n">4</span> degrees, measured.</p>
         </article>
         <i class="conn in" style="--d:1050ms"></i>
         <article class="node in" style="--d:1100ms">
@@ -244,7 +244,7 @@
 
   <!-- 08 · from any video -->
   <section class="slide s8" data-kick="From any video" data-dwell="16"
-    data-line="Skeleton in, robot out. Not one pixel of the person is stored.">
+    data-line="Skeleton in, robot out. The dataset keeps joint angles only, never pixels.">
     <div class="body two-col">
       <figure class="screen in" style="--d:300ms" data-media>
         <canvas class="amb ph" data-scene="split" aria-hidden="true"></canvas>
@@ -256,7 +256,7 @@
         <h2 class="h-lg" data-split style="--d:0ms">From <em>any video.</em></h2>
         <p class="lead in" style="--d:700ms">Demonstrations from videos found online.</p>
         <p class="lead strong in" style="--d:900ms">Skeleton in, robot out.</p>
-        <div class="privacy in" style="--d:1150ms"><b class="n">0</b><span>Not one pixel of the person is stored.</span></div>
+        <div class="privacy in" style="--d:1150ms"><b class="n">0</b><span>pixels in the dataset. It keeps joint angles only.</span></div>
       </div>
     </div>
   </section>
@@ -297,12 +297,12 @@
     <div class="body col">
       <h2 class="h-xl" data-split style="--d:0ms">What is <em>real</em> today.</h2>
       <div class="real">
-        <article class="cell in" style="--d:500ms"><b class="n" data-count="19">19</b><span>tests against real MuJoCo</span></article>
-        <article class="cell in" style="--d:620ms"><b class="n"><small class="pre">&lt;</small>3<small>deg</small></b><span>retarget error &lt; <i class="n">3</i> degrees</span></article>
+        <article class="cell in" style="--d:500ms"><b class="n" data-count="20">20</b><span>tests against real MuJoCo, on the real G1 model</span></article>
+        <article class="cell in" style="--d:620ms"><b class="n"><small class="pre">&lt;</small>4<small>deg</small></b><span>retarget error &lt; <i class="n">4</i> degrees, measured in physics</span></article>
         <article class="cell ok in" style="--d:740ms"><b class="n"><i data-count="6">6</i>/6</b><span>tasks accepted from the scripted pilot</span></article>
         <article class="cell bad in" style="--d:860ms"><b class="n" data-count="5">5</b><span>tamper cases rejected</span></article>
         <article class="cell in" style="--d:980ms"><b class="n">v3.0</b><span>dataset written and loaded back with LeRobot <i class="n">0.6.1</i> (format <i class="n">v3.0</i>)</span></article>
-        <article class="cell zero in" style="--d:1100ms"><b class="n" data-count="0" data-from="640">0</b><span>pixels of any operator stored</span></article>
+        <article class="cell zero in" style="--d:1100ms"><b class="n" data-count="0" data-from="640">0</b><span>pixels of any operator in the dataset</span></article>
       </div>
       <p class="honest in" style="--d:1500ms"><span class="lbl">HONEST NOTE</span>Replay is open-loop playback of recorded actions. No policy is trained here. The dataset is the product.</p>
     </div>
